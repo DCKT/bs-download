@@ -10,7 +10,7 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": [],
+  "bs-dependencies": ["@dck/bs-node"],
   "warnings": {
     "error": "+101"
   },

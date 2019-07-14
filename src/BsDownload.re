@@ -1,8 +1,14 @@
+open BsNode;
+
 module DownloadOptions = {
   [@bs.deriving abstract]
   type t = {
+    [@bs.optional]
     extract: bool,
+    [@bs.optional]
     filename: string,
+    [@bs.optional]
+    proxy: string,
   };
 };
 
@@ -46,6 +52,9 @@ type downloadResponse = Js.Promise.t(DownloadResponse.payload);
 [@bs.module "download"]
 external download: (string, string, DownloadOptions.t) => downloadResponse =
   "download";
+
+[@bs.module "download"]
+external downloadAsStream: string => Fs.Stream.t = "download";
 
 [@bs.send.pipe: downloadResponse]
 external on:

@@ -26,7 +26,7 @@ open BsDownload;
 download(
   "http://download-link.something",
   "destination/folder",
-  DownloadOptions.t(~extract=false, ~filename="custom filename")
+  DownloadOptions.t(~extract=false, ~filename="custom filename", ())
 )
 |> Js.Promise.then_(data => {
   Js.log(data->DownloadResponse.filepathGet);
@@ -45,7 +45,7 @@ let downloadedContent = ref(0);
 download(
   "http://download-link.something",
   "destination/folder",
-  DownloadOptions.t(~extract=false, ~filename="custom filename")
+  DownloadOptions.t(~extract=false, ~filename="custom filename", ())
 )
 |> on(`response(res => {
   let contentLength =

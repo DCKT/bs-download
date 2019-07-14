@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@dck/bs-node@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@dck/bs-node/-/bs-node-0.2.1.tgz#d14a75fc9d97ad5f9e492232b4c8daa7ef72e7c1"
+  integrity sha512-oMwzeGO6kRDsDC7scQbjlXM/DMTdO2IIVsdbiDZtagSo9TWmXhm8o7p3X/T7EE9nxHLV5Etwrzaj0Mx7WpwrCQ==
+
 bs-platform@5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.6.tgz#88c13041fb020479800de3d82c680bf971091425"
