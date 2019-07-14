@@ -47,10 +47,6 @@ download(
   "destination/folder",
   DownloadOptions.t(~extract=false, ~filename="custom filename")
 )
-|> Js.Promise.then_(data => {
-  Js.log(data->DownloadResponse.filepathGet);
-  Js.Promise.resolve();
-})
 |> on(`response(res => {
   let contentLength =
       res
@@ -67,5 +63,9 @@ download(
 |> on(`end_(() => {
   Js.log("End.");
 }))
+|> Js.Promise.then_(data => {
+  Js.log(data->DownloadResponse.filepathGet);
+  Js.Promise.resolve();
+})
 |> ignore;
 ```
